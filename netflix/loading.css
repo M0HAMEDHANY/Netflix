@@ -1,0 +1,55 @@
+:root {
+  --main-color: #ff2c1f;
+  --text-color: #020307;
+  --bg-color: #fff;
+  --link-color:#868484
+}
+/* custom scroll  */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--text-color);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
+body {
+background: var(--text-color);
+color: var(--bg-color);
+}
+.loading{
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border-radius: 50%;
+    left: 50%;
+    border: solid var(--main-color) 10px;
+    border-left-color: transparent;
+    width: 110px;
+    height: 110px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation-name: spin;
+    animation-duration: .6s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spin{
+    0%{
+        transform:translate(-50%,-50%) rotate(0deg);
+        -webkit-transform:translate(-50%,-50%) rotate(0deg);
+        -moz-transform:translate(-50%,-50%) rotate(0deg);
+        -ms-transform:translate(-50%,-50%) rotate(0deg);
+        -o-transform:translate(-50%,-50%) rotate(0deg);
+}
+100%{
+    transform:translate(-50%,-50%) rotate(360deg);
+    -webkit-transform:translate(-50%,-50%) rotate(360deg);
+    -moz-transform:translate(-50%,-50%) rotate(360deg);
+    -ms-transform:translate(-50%,-50%) rotate(360deg);
+    -o-transform:translate(-50%,-50%) rotate(360deg);
+}
+}
