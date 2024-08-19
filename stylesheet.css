@@ -37,7 +37,7 @@ section {
   padding: 4.5rem 0 1.5rem;
 }
 
-/* anime  */
+/* movie  */
 .heading {
   position: relative;
   max-width: 968px;
@@ -70,7 +70,7 @@ section {
   font-size: 14px;
 }
 
-/* coming containrer  */
+/* coming container  */
 .coming-container {
   display: grid;
   gap: 1rem;

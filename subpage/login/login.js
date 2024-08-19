@@ -16,19 +16,19 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  const localStorageData = localStorage.getItem("users");
+  const localStorageData = JSON.parse(localStorage.getItem("users"));
 
   if (localStorageData) {
-    const newLocalStorageData = JSON.parse(localStorageData);
-    localStorage.setItem(
-      "users",
-      JSON.stringify([...newLocalStorageData, userInfo]),
-    );
-  } else {
-    localStorage.setItem("users", JSON.stringify([userInfo]));
+    localStorageData.forEach((user) => {
+      if (
+        user["email"] === userInfo["email"] &&
+        user["password"] === userInfo["password"]
+      ) {
+        localStorage.setItem("loggedIn", true);
+        window.location.assign("");
+      }
+    });
   }
-
-  window.location.assign("/subpage/signin/signin.html");
 });
 
 let view = document.querySelector(".view");
@@ -36,3 +36,4 @@ let view = document.querySelector(".view");
 view.onclick = () =>
   (password.attributes[0].value =
     password.attributes[0].value === "text" ? "password" : "text");
+

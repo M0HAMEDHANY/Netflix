@@ -17,7 +17,7 @@ for (i = 0; i < 1; i++) {
   scroll.append(content);
 }
 mybody.append(scroll);
-const authenticationButtons = document.querySelector(".signin");
+const authenticationButtons = document.querySelector(".login");
 
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedIn")) === true;
 

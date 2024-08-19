@@ -6,6 +6,7 @@
   --thirdcolor: #4e4feb;
   --highlight: #03e9f4;
 }
+
 .navbar {
   position: sticky;
   z-index: 8;
@@ -29,9 +30,11 @@
   padding: 10px;
   max-width: 150px;
 }
+
 .links {
   width: 60%;
 }
+
 .links ul {
   display: flex;
   flex-direction: row;
@@ -48,20 +51,21 @@
   color: var(--bg-color);
   font-size: 20px;
 }
+
 .container a:hover {
   color: var(--main-color);
 }
 
-.signin {
+.login {
   margin: 5px;
   display: flex;
   justify-content: space-evenly;
   width: 25%;
 }
 
-.signin a button {
+.login a button {
   font-size: 12px;
-  border-radius: 10%;
+  border-radius: 15px;
   width: 80px;
   height: 35px;
   border: transparent solid 2px;
@@ -70,12 +74,13 @@
   background-color: var(--bg-color);
   transition-duration: 0.3s;
   margin-left: 10px;
-  -webkit-border-radius: 10%;
+  /* -webkit-border-radius: 10%;
   -moz-border-radius: 10%;
   -ms-border-radius: 10%;
-  -o-border-radius: 10%;
+  -o-border-radius: 10%; */
 }
-.signin a:nth-child(1) button:hover {
+
+.login a:nth-child(1) button:hover {
   background-color: var(--main-color);
   box-shadow:
     0 0 10px 0px var(--main-color),
@@ -83,7 +88,8 @@
     0 0 40px 0 var(--main-color);
   color: var(--bg-color);
 }
-.signin a:nth-child(2) button:hover {
+
+.login a:nth-child(2) button:hover {
   background-color: var(--thirdcolor);
   box-shadow:
     0 0 10px 0px var(--thirdcolor),
@@ -91,34 +97,41 @@
     0 0 40px 0 var(--thirdcolor);
   color: var(--bg-color);
 }
+
 @media (max-width: 1080px) {
   .home-text {
     padding: 0 100px;
   }
 }
+
 @media (max-width: 991px) {
   .container .links a {
     font-size: 12px;
   }
-  .container > a {
+
+  .container>a {
     width: 15%;
   }
-  .signin a button {
+
+  .login a button {
     width: 50px;
     font-size: 10px;
   }
 }
+
 @media (max-width: 472px) {
   .container .links a {
     font-size: 7px;
   }
 
-  .container > a {
+  .container>a {
     width: 8%;
   }
-  .signin {
+
+  .login {
     width: 40%;
   }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -126,4 +139,3 @@
     margin-left: 1%;
   }
 }
-

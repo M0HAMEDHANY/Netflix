@@ -16,24 +16,23 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  const localStorageData = JSON.parse(localStorage.getItem("users"));
+  const localStorageData = localStorage.getItem("users");
 
   if (localStorageData) {
-    localStorageData.forEach((user) => {
-      if (
-        user["email"] === userInfo["email"] &&
-        user["password"] === userInfo["password"]
-      ) {
-        localStorage.setItem("loggedIn", true);
-        window.location.assign("/");
-      }
-    });
+    const newLocalStorageData = JSON.parse(localStorageData);
+    localStorage.setItem(
+      "users",
+      JSON.stringify([...newLocalStorageData, userInfo]),
+    );
+  } else {
+    localStorage.setItem("users", JSON.stringify([userInfo]));
   }
+
+  window.location.assign("/subpage/login/login.html");
 });
 
 let view = document.querySelector(".view");
 
 view.onclick = () =>
-  (password.attributes[0].value =
-    password.attributes[0].value === "text" ? "password" : "text");
-
+(password.attributes[0].value =
+  password.attributes[0].value === "text" ? "password" : "text");

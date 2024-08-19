@@ -42,7 +42,7 @@ let nav = document.querySelector(".navbar");
 let body = document.querySelector("body");
 let home = document.querySelector("Home");
 
-const authenticationButtons = document.querySelector(".signin");
+const authenticationButtons = document.querySelector(".login");
 
 const isLoggedIn = JSON.parse(localStorage.getItem("loggedIn")) === true;
 
